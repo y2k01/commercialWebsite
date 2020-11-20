@@ -922,3 +922,22 @@ const products = [
     ${products.map(productTemplate).join('')}
 
     `
+    document.querySelector('#search').oninput = function(){
+        let val = this.value.trim();
+        let items = document.querySelectorAll('.col-4')
+        if (val != '') {
+            items.forEach(function(elem) {
+                if (elem.innerText.search(val) == -1) {
+                    elem.classList.add('hide');
+                }
+                else {
+                    elem.classList.remove('hide');
+                }
+            });
+        }
+        else {
+            items.forEach(function(elem) {
+                elem.classList.remove('hide');
+            });
+        }
+    }
