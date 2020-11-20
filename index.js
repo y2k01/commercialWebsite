@@ -907,9 +907,7 @@ const products = [
         }
     ]
 
-    document.getElementById("row").innerHTML = `
-
-    ${products.map(function(product) {
+    function productTemplate(product) {
         return `
         <div class="col-4">
             <img src="https://www.flaticon.com/svg/static/icons/svg/2476/2476199.svg">
@@ -917,6 +915,10 @@ const products = [
             <p>${product.price}&#8381</p>
         </div>
         `
-    }).join('')}
+    }
+
+    document.getElementById("row").innerHTML = `
+
+    ${products.map(productTemplate).join('')}
 
     `
