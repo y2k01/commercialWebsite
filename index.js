@@ -906,7 +906,7 @@ const products = [
             "price": "500.00"
         }
     ]
-
+    
     function productTemplate(product) {
         return `
         <div class="col-4">
@@ -917,28 +917,28 @@ const products = [
         `
     }
 
+    //shows all the products available
     document.getElementById("row").innerHTML = `
-
     ${products.map(productTemplate).join('')}
-
     `
     document.querySelector('#search').oninput = function(){
         let val = this.value.trim();
         let items = document.querySelectorAll('.col-4')
         if (val != '') {
             items.forEach(function(elem) {
-                if (elem.innerText.toLowerCase().search(val) == -1) {
-                    elem.classList.add('hide');
-                }
-                else {
-                    elem.classList.remove('hide');
-
-                }
+               //case insensitive search
+               if (elem.innerHTML.toLowerCase().indexOf(val) != -1) {
+                   elem.classList.remove('hide');
+               } else {
+                   elem.classList.add('hide');
+               }
             });
         }
+        /* do i need this?
         else {
             items.forEach(function(elem) {
                 elem.classList.remove('hide'); 
             });
         }
+        */
     }

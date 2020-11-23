@@ -102,6 +102,9 @@ body {
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;
+
+    //search
+
     input {
       display: flex;
       width: 50%;
@@ -109,6 +112,7 @@ body {
       font-size: 30px;
       margin: auto;
       margin-bottom: 100px;
+      border: 10px solid black;
     }
   }
   
