@@ -53,11 +53,14 @@ body {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: space-around;
+    margin-left: 100px;
+    margin-bottom: 50px;
+    justify-content: flex-start;
       .hide {
         display: none;
       }
   }
+
   
   .col-2 {
     flex-basis: 50%;
@@ -102,6 +105,8 @@ body {
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;
+    
+ 
 
     //search
 
@@ -112,7 +117,7 @@ body {
       font-size: 30px;
       margin: auto;
       margin-bottom: 100px;
-      border: 10px solid black;
+      border: 5px solid black;
     }
   }
   
@@ -122,6 +127,7 @@ body {
     min-width: 200px;
     margin-bottom: 50px;
     transition: transform 0.5s;
+    
         img {
             width: 100%;
         }
@@ -165,6 +171,8 @@ body {
     margin-top: 80px;
     padding: 30px 0;
     color: white;
+    // invisible
+    display: none;
   }
   
   .offer-img {
