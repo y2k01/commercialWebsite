@@ -1,4 +1,4 @@
-const refills =
+    const refills =
     [
         {
             "product_id": "50",
@@ -1062,55 +1062,311 @@ const refills =
             "type": "cartridge"
         }
     ]
-        
-    function firstSectionName() {
-        return `
-        <h1>ЗАПРАВКА КАРТРИДЖЕЙ</h1>
-        `
-    }
 
-    function refillGenerate(product) {
-        return `
-        <div class="col-4">
-            <img src="https://www.flaticon.com/svg/static/icons/svg/29/29313.svg">
-            <h4>${product.name}</h4>
-            <p>${product.price}&#8381</p>
-        </div>
-        `
-    }
-    
-    function secondSectionName() {
-        return `
-        <h1>КАРТРИДЖИ</h1>
-        `
-    }
-
-    function cartridgesGenerate(product) {
-        return `
-        <div class="col-4">
-            <img src="https://www.flaticon.com/svg/static/icons/svg/1861/1861237.svg">
-            <h4>${product.name}</h4>
-            <p>${product.price}&#8381</p>
-        </div>
-        `
-    }
 
     //shows all the products available
+    
+    var cartridgeRefill = document.createElement('div');
+    cartridgeRefill.classList.add('row')
+    cartridgeRefill.setAttribute('id', 'first-section-name')
+    cartridgeRefill.innerHTML = "<h1>Заправка картриджей</h1>"
+    document.getElementById('first-sc').appendChild(cartridgeRefill);
 
-    document.getElementById("first-section-name").innerHTML = `
-    ${firstSectionName()}
+    var hpTag = document.createElement('div');
+    hpTag.classList.add('row')
+    hpTag.setAttribute('id', 'hp-tag')
+    hpTag.innerHTML = "<h2>HP</h2>"
+    document.getElementById('first-sc').appendChild(hpTag);  
+
+    //HP
+    var hp = document.createElement('div');
+    hp.classList.add('row');
+    hp.setAttribute('id', 'hp')
+    document.getElementById('first-sc').appendChild(hp);
+
+    function refillGenerateHP(product) {
+        if (product.name.includes('HP')) {
+            return `
+            <div class="col-4">
+                <img src="https://www.flaticon.com/svg/static/icons/svg/29/29313.svg">
+                <h4>${product.name}</h4>
+                <p>${product.price}&#8381</p>
+            </div>
+            `
+        } 
+    }
+
+    document.getElementById("hp").innerHTML = `
+    ${refills.map(refillGenerateHP).join('')}
     `
-    document.getElementById("row").innerHTML = `
-    ${refills.map(refillGenerate).join('')}
+    //Kyocera
+    var kyoceraTag = document.createElement('div');
+    kyoceraTag.classList.add('row')
+    kyoceraTag.setAttribute('id', 'kyocera-tag')
+    kyoceraTag.innerHTML = "<h2>Kyocera</h2>"
+    document.getElementById('first-sc').appendChild(kyoceraTag);
+
+    var kyocera = document.createElement('div');
+    kyocera.classList.add('row');
+    kyocera.setAttribute('id', 'kyocera')
+    document.getElementById('first-sc').appendChild(kyocera);
+
+    function refillGenerateKyocera(product) {
+        if (product.name.includes('Kyocera')) {
+            return `
+            <div class="col-4">
+                <img src="https://www.flaticon.com/svg/static/icons/svg/29/29313.svg">
+                <h4>${product.name}</h4>
+                <p>${product.price}&#8381</p>
+            </div>
+            `
+        } 
+    }
+
+    document.getElementById("kyocera").innerHTML = `
+    ${refills.map(refillGenerateKyocera).join('')}
     `
-    document.getElementById("second-section-name").innerHTML = `
-    ${secondSectionName()}
+    //Brother
+
+    var brotherTag = document.createElement('div');
+    brotherTag.classList.add('row')
+    brotherTag.setAttribute('id', 'brother-tag')
+    brotherTag.innerHTML = "<h2>Brother</h2>"
+    document.getElementById('first-sc').appendChild(brotherTag);
+
+    var brother = document.createElement('div');
+    brother.classList.add('row');
+    brother.setAttribute('id', 'brother')
+    document.getElementById('first-sc').appendChild(brother);
+
+    function refillGenerateBrother(product) {
+        if (product.name.includes('Brother')) {
+            return `
+            <div class="col-4">
+                <img src="https://www.flaticon.com/svg/static/icons/svg/29/29313.svg">
+                <h4>${product.name}</h4>
+                <p>${product.price}&#8381</p>
+            </div>
+            `
+        } 
+    }
+
+    document.getElementById("brother").innerHTML = `
+    ${refills.map(refillGenerateBrother).join('')}
     `
-    document.getElementById("row-2").innerHTML = `
-    ${cartridges.map(cartridgesGenerate).join('')}
+    //Canon
+
+ var canonTag = document.createElement('div');
+    canonTag.classList.add('row')
+    canonTag.setAttribute('id', 'canon-tag')
+    canonTag.innerHTML = "<h2>Canon</h2>"
+    document.getElementById('first-sc').appendChild(canonTag);
+
+    var canon = document.createElement('div');
+    canon.classList.add('row');
+    canon.setAttribute('id', 'canon')
+    document.getElementById('first-sc').appendChild(canon);
+
+    function refillGenerateCanon(product) {
+        if (product.name.includes('Canon')) {
+            return `
+            <div class="col-4">
+                <img src="https://www.flaticon.com/svg/static/icons/svg/29/29313.svg">
+                <h4>${product.name}</h4>
+                <p>${product.price}&#8381</p>
+            </div>
+            `
+        } 
+    }
+
+    document.getElementById("canon").innerHTML = `
+    ${refills.map(refillGenerateCanon).join('')}
+    `
+
+    //Xerox
+
+    var xeroxTag = document.createElement('div');
+    xeroxTag.classList.add('row')
+    xeroxTag.setAttribute('id', 'xerox-tag')
+    xeroxTag.innerHTML = "<h2>Xerox</h2>"
+    document.getElementById('first-sc').appendChild(xeroxTag);
+
+    var xerox = document.createElement('div');
+    xerox.classList.add('row');
+    xerox.setAttribute('id', 'xerox')
+    document.getElementById('first-sc').appendChild(xerox);
+
+    function refillGenerateXerox(product) {
+        if (product.name.includes('Xerox')) {
+            return `
+            <div class="col-4">
+                <img src="https://www.flaticon.com/svg/static/icons/svg/29/29313.svg">
+                <h4>${product.name}</h4>
+                <p>${product.price}&#8381</p>
+            </div>
+            `
+        } 
+    }
+
+    document.getElementById("xerox").innerHTML = `
+    ${refills.map(refillGenerateXerox).join('')}
+    `
+
+    //Panasonic
+    var panasonicTag = document.createElement('div');
+    panasonicTag.classList.add('row')
+    panasonicTag.setAttribute('id', 'panasonic-tag')
+    panasonicTag.innerHTML = "<h2>Panasonic</h2>"
+    document.getElementById('first-sc').appendChild(panasonicTag);
+
+    var panasonic = document.createElement('div');
+    panasonic.classList.add('row');
+    panasonic.setAttribute('id', 'panasonic')
+    document.getElementById('first-sc').appendChild(panasonic);
+
+    function refillGeneratePanasonic(product) {
+        if (product.name.includes('Panasonic')) {
+            return `
+            <div class="col-4">
+                <img src="https://www.flaticon.com/svg/static/icons/svg/29/29313.svg">
+                <h4>${product.name}</h4>
+                <p>${product.price}&#8381</p>
+            </div>
+            `
+        }
+    }
+
+    document.getElementById("panasonic").innerHTML = `
+    ${refills.map(refillGeneratePanasonic).join('')}
     `
     
+    //Samsung
+    var samsungTag = document.createElement('div');
+    samsungTag.classList.add('row')
+    samsungTag.setAttribute('id', 'samsung-tag')
+    samsungTag.innerHTML = "<h2>Samsung</h2>"
+    document.getElementById('first-sc').appendChild(samsungTag);
 
+    var samsung = document.createElement('div');
+    samsung.classList.add('row');
+    samsung.setAttribute('id', 'samsung')
+    document.getElementById('first-sc').appendChild(samsung);
+
+    function refillGenerateSamsung(product) {
+        if (product.name.includes('Samsung')) {
+            return `
+            <div class="col-4">
+                <img src="https://www.flaticon.com/svg/static/icons/svg/29/29313.svg">
+                <h4>${product.name}</h4>
+                <p>${product.price}&#8381</p>
+            </div>
+            `
+        } 
+    }
+
+    document.getElementById("samsung").innerHTML = `
+    ${refills.map(refillGenerateSamsung).join('')}
+    `
+
+    //Продажа картриджей
+
+    var cartridgeSelling = document.createElement('div')
+    cartridgeSelling.classList.add('row')
+    cartridgeSelling.setAttribute('id', 'second-section-name')
+    cartridgeSelling.innerHTML = "<h1>Картриджи на продажу</h1>"
+    document.getElementById('first-sc').appendChild(cartridgeSelling)
+
+    var cartridgeSellingTag = document.createElement('div')
+    cartridgeSellingTag.classList.add('row')
+    cartridgeSellingTag.setAttribute('id', 'row-2')
+    document.getElementById('first-sc').appendChild(cartridgeSellingTag)
+
+    //ProTone
+    var protoneTag = document.createElement('div');
+    protoneTag.classList.add('row')
+    protoneTag.setAttribute('id', 'protone-tag')
+    protoneTag.innerHTML = "<h2>ProTone</h2>"
+    document.getElementById('first-sc').appendChild(protoneTag);
+
+    var protone = document.createElement('div');
+    protone.classList.add('row');
+    protone.setAttribute('id', 'protone')
+    document.getElementById('first-sc').appendChild(protone);
+
+    function cartridgesGenerateProTone(product) {
+        if (product.name.includes('ProTone')) {
+            return `
+            <div class="col-4">
+                <img src="https://www.flaticon.com/svg/static/icons/svg/1861/1861237.svg"></img>
+                <h4>${product.name}</h4>
+                <p>${product.price}&#8381</p>
+            </div>
+            `
+        } 
+    }
+
+    document.getElementById("protone").innerHTML = `
+    ${cartridges.map(cartridgesGenerateProTone).join('')}
+    `
+    
+    //NetProduct
+    
+    var netProductTag = document.createElement('div');
+    netProductTag.classList.add('row')
+    netProductTag.setAttribute('id', 'netProduct-tag')
+    netProductTag.innerHTML = "<h2>NetProduct</h2>"
+    document.getElementById('first-sc').appendChild(netProductTag);
+
+    var netProduct = document.createElement('div');
+    netProduct.classList.add('row');
+    netProduct.setAttribute('id', 'netproduct')
+    document.getElementById('first-sc').appendChild(netProduct);
+
+    function cartridgesGenerateNetProduct(product) {
+        if (product.name.includes('NetProduct')) {
+            return `
+            <div class="col-4">
+                <img src="https://www.flaticon.com/svg/static/icons/svg/1861/1861237.svg"></img>
+                <h4>${product.name}</h4>
+                <p>${product.price}&#8381</p>
+            </div>
+            `
+        } 
+    }
+
+    document.getElementById("netproduct").innerHTML = `
+    ${cartridges.map(cartridgesGenerateNetProduct).join('')}
+    `
+    //NRM
+
+    var nrmTag = document.createElement('div');
+    nrmTag.classList.add('row')
+    nrmTag.setAttribute('id', 'nrm-tag')
+    nrmTag.innerHTML = "<h2>NRM</h2>"
+    document.getElementById('first-sc').appendChild(nrmTag);
+
+    var nrm = document.createElement('div');
+    nrm.classList.add('row');
+    nrm.setAttribute('id', 'nrm')
+    document.getElementById('first-sc').appendChild(nrm);
+
+    function cartridgesGenerateNRM(product) {
+        if (product.name.includes('NRM')) {
+            return `
+            <div class="col-4">
+                <img src="https://www.flaticon.com/svg/static/icons/svg/1861/1861237.svg"></img>
+                <h4>${product.name}</h4>
+                <p>${product.price}&#8381</p>
+            </div>
+            `
+        } 
+    }
+
+    document.getElementById("nrm").innerHTML = `
+    ${cartridges.map(cartridgesGenerateNRM).join('')}
+    `
+    
+    //Поиск
     document.querySelector('#search').oninput = function(){
         let val = this.value.trim();
         let items = document.querySelectorAll('.col-4');
