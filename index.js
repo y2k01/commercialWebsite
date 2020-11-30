@@ -1373,7 +1373,7 @@
         if (val != '') {
             items.forEach(function(elem) {
                //case insensitive search
-               if (elem.innerHTML.toLowerCase().indexOf(val) != -1) {
+               if (elem.innerHTML.toLowerCase().indexOf(val) != -1 || elem.innerHTML.toUpperCase().indexOf(val) != -1) {
                    elem.classList.remove('hide');
                } else {
                    elem.classList.add('hide');
