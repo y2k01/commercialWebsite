@@ -1370,6 +1370,9 @@
     document.querySelector('#search').oninput = function(){
         let val = this.value.trim();
         let items = document.querySelectorAll('.col-4');
+        let hpContent = document.querySelectorAll('#hp');
+        var hpTagFound = document.querySelectorAll('#hp-tag');
+
         if (val != '') {
             items.forEach(function(elem) {
                //case insensitive search
@@ -1379,6 +1382,15 @@
                    elem.classList.add('hide');
                }
             });
+
+            hpContent.forEach(function(elem) {
+                //case insensitive search
+                if (elem.innerHTML.toLowerCase().indexOf(val) != -1 || elem.innerHTML.toUpperCase().indexOf(val) != -1) {
+                     hpTagFound.classList.remove('hide');
+                } else {
+                     hpTagFound.classList.add('hide');
+                }
+             });
         }
 
         else {
@@ -1386,5 +1398,9 @@
                 elem.classList.remove('hide'); 
             });
         }
+
+
+
+
     }
 
