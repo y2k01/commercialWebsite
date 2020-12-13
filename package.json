@@ -1,0 +1,39 @@
+{
+  "name": "tcykt",
+  "version": "1.0.0",
+  "description": "tcykt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/y2k01/tcykt.git"
+  },
+  "keywords": [
+    "javascript",
+    "css",
+    "html",
+    "node"
+  ],
+  "author": "Pavlov Stanislav <stanportableuse@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/y2k01/tcykt/issues"
+  },
+  "homepage": "https://github.com/y2k01/tcykt#readme",
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^7.0.0",
+    "css-loader": "^5.0.1",
+    "html-webpack-plugin": "^4.5.0",
+    "papaparse": "^5.3.0",
+    "sass": "^1.30.0",
+    "sass-loader": "^10.1.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.10.1",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {}
+}
